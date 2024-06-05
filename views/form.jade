@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    h1 Add a new message to the #{title}
+
+    form(method="POST", action="/new")
+        .inputContainer
+            input.inputField(type="text", placeholder="Your Name", name="userName", required=true)
+            textarea.inputField(type="text", placeholder="Your Message", name="userMessage", rows=10, required=true)
+            .btns
+                button.button(type="sumit") Submit
+                a.button(href='/') Home

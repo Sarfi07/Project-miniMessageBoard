@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a.button(href='/new') Add Message
+
+  .messageDiv
+    each m in messages
+      .card
+        h2 #{m.user}
+        p #{m.text}
+        p.date Posted on: #{m.formattedDate}
